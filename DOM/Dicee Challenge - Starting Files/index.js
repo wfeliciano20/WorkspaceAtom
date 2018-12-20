@@ -1,8 +1,12 @@
 var randomNumber1, randomNumber2, imgLeft, imgRight;
 
-var img1 = document.getElementById("img1");
+var images
 
-var img2 = document.getElementById("img2");
+var img1 = document.querySelectorAll("img")[0];
+
+var img2 = document.querySelectorAll("img")[1];
+
+var button = document.querySelector("button");
 
 randomNumber1 = 1 + Math.floor(6 * Math.random());
 
@@ -11,10 +15,6 @@ randomNumber2 = 1 + Math.floor(6 * Math.random());
 imgLeft = "images/dice" + randomNumber1 + ".png";
 
 imgRight = "images/dice" + randomNumber2 + ".png";
-
-img1.addEventListener("click", clicked);
-
-img2.addEventListener("click", clicked);
 
 function clicked() {
 
@@ -37,3 +37,5 @@ function clicked() {
     }
 
 }
+
+button.addEventListener("click", clicked);
