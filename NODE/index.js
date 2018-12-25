@@ -4,4 +4,4 @@ console.log("Hello NODE");
 
 const fs = require("fs");
 
-let i = 1;
+fs.copyFileSync("file.txt", "fileCopy.txt");
