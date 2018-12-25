@@ -14,6 +14,12 @@ app.get("/", function(req, res) {
 
 });
 
+app.get("/bmicalculator", function(req, res) {
+
+    res.sendFile(__dirname + "/bmiCalculator.html");
+
+});
+
 app.post("/", function(req, res) {
 
     let num1 = Number(req.body.num1);
@@ -23,6 +29,18 @@ app.post("/", function(req, res) {
     let result = num1 + num2;
 
     res.send("The result of the calculation is " + result);
+
+});
+
+app.post("/bmicalculator", function(req, res) {
+
+    let weight = Number(req.body.weight);
+
+    let height = Number(req.body.height);
+
+    let bmi = weight / (height * height);
+
+    res.send("Your body mass index is " + bmi.toFixed(2));
 
 });
 
