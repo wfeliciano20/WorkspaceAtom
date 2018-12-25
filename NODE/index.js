@@ -4,4 +4,4 @@ console.log("Hello NODE");
 
 const fs = require("fs");
 
-fs.
+let i = 1;
