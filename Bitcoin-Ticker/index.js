@@ -4,15 +4,30 @@ const express = require("express");
 
 const bodyParser = require("body-parser");
 
+const request = require("request");
+
 const app = espress();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", function(req, req) {
+app.get("/", function(req, res) {
 
     res.sendFile(__dirname + "/index.html");
 
-})
+});
+
+app.post("/", function(req, res) {
+
+    let url = "https://apiv2.bitcounaverage.com/indices/global/ticker/BTCUSD";
+
+    request("url", function(error, response, body) {
+
+        console.log(body);
+
+
+    });
+
+});
 
 app.listen(3000, function() {
 

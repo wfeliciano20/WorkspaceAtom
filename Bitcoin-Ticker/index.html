@@ -10,15 +10,33 @@
 
 <body>
 
-    <select name="crypto">
+    <h1>Bitcoin Ticker</h1>
 
-        <option value="BTC">Bitcoin</option>
+    <form action="/" method="post">
 
-        <option value="E">Ethereum</option>
+        <select name="crypto">
+        
+            <option value="BTC">Bitcoin</option>
+        
+            <option value="ETH">Ethereum</option>
+        
+            <option value="LTC">Litecoin</option>
+        
+        </select>
 
-        <option value="LTC">Litecoin</option>
+        <select name="fiat">
+        
+            <option value="USD">US Dollars</option>
+        
+            <option value="GBP">GB Pounds</option>
+        
+            <option value="EUR">EU Euros</option>
+        
+        </select>
 
-    </select>
+        <button type="submit">Check</button>
+
+    </form>
 
 </body>
 
