@@ -4,7 +4,7 @@ const express = require("express");
 
 const bodyParser = require("body-parser");
 
-const request = require("request");
+const request = require("request"); // use to do a request to an external server
 
 const app = espress();
 
