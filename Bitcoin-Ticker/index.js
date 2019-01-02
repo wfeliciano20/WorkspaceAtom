@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 
 const request = require("request"); // use to do a request to an external server
 
-const app = espress();
+const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -18,11 +18,24 @@ app.get("/", function(req, res) {
 
 app.post("/", function(req, res) {
 
-    let url = "https://apiv2.bitcounaverage.com/indices/global/ticker/BTCUSD";
+    let crypto = req.body.crypto;
+
+    let fiat = req.body.fiat;
+
+    let url = "https://apiv2.bitcounaverage.com/indices/global/ticker/" + crypto + fiat;
 
     request("url", function(error, response, body) {
 
-        console.log(body);
+        let data = JSON.parse(body);
+
+        let price = data.last;
+
+        let currentDate = data.display_timestamp;
+
+        res.write("<p>The current date is " + currentDate + "</p>");
+
+        res.write("<h1>The current price of " + crypto + " is " + price + " " + fiat + "</h1>");
+
 
 
     });
