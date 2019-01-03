@@ -22,7 +22,7 @@ app.post("/", function(req, res) {
 
     let fiat = req.body.fiat;
 
-    let url = "https://apiv2.bitcounaverage.com/indices/global/ticker/";
+    let url = "https://apiv2.bitcoinaverage.com/indices/global/ticker/";
 
     let finalURL = url + crypto + fiat;
 
