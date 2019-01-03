@@ -22,9 +22,11 @@ app.post("/", function(req, res) {
 
     let fiat = req.body.fiat;
 
-    let url = "https://apiv2.bitcounaverage.com/indices/global/ticker/" + crypto + fiat;
+    let url = "https://apiv2.bitcounaverage.com/indices/global/ticker/";
 
-    request("url", function(error, response, body) {
+    let finalURL = url + crypto + fiat;
+
+    request(finalURL, function(error, response, body) {
 
         let data = JSON.parse(body);
 
@@ -36,7 +38,7 @@ app.post("/", function(req, res) {
 
         res.write("<h1>The current price of " + crypto + " is " + price + " " + fiat + "</h1>");
 
-
+        res.send();
 
     });
 

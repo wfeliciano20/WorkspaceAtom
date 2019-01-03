@@ -1,0 +1,23 @@
+{
+  "name": "todolist-v1",
+  "version": "1.0.0",
+  "description": "Todo list app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wfeliciano20/WorkspaceWebDevCourse.git"
+  },
+  "author": "William Feliciano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wfeliciano20/WorkspaceWebDevCourse/issues"
+  },
+  "homepage": "https://github.com/wfeliciano20/WorkspaceWebDevCourse#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
