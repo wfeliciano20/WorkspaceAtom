@@ -56,6 +56,12 @@ Person.find(function(err, persons) {
 
     } else {
 
+        persons.forEach(function(person) {
+
+            console.log(person.name);
+
+        });
+
         console.log(persons);
 
     }
@@ -64,31 +70,6 @@ Person.find(function(err, persons) {
 
 //Only run this once since runnig it every time would add John every time
 // person.save();
-
-// const mongoose = require('mongoose');
-
-// mongoose.connect("mongodb://localhost:27017/fruitsDB", { useNewUrlParser: true });
-
-// const fruitSchema = new mongoose.Schema({
-
-//     name: String,
-//     rating: Number,
-//     review: String
-
-// });
-
-// const Fruit = mongoose.model("Fruit", fruitSchema);
-
-// const fruit = new Fruit({
-
-//     name: "Apple",
-//     rating: 7,
-//     review: "One a day keeps the doctor away."
-
-// });
-
-//Only run this once since runnig it every time would create a new apple
-//fruit.save();
 
 //How to do things without mongoose
 
