@@ -36,13 +36,27 @@ const person3 = new Person({
 
 });
 
-Person.insertMany([person2, person3], function(err) {
+// Person.insertMany([person2, person3], function(err) {
+
+//     if (err) {
+//         console.log(err);
+
+//     } else {
+//         console.log("Succesfully saved all the people to peopleDB");
+
+//     }
+
+// });
+
+Person.find(function(err, persons) {
 
     if (err) {
+
         console.log(err);
 
     } else {
-        console.log("Succesfully saved all the people to peopleDB");
+
+        console.log(persons);
 
     }
 
