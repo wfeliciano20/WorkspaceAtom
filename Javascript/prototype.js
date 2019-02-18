@@ -1,4 +1,4 @@
-//  use 'esvertion:6'
+//jshint esversion:6
 //Constructor
 function Book(title, author, year) {
     // Properties

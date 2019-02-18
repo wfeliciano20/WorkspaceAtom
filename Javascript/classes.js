@@ -1,3 +1,4 @@
+//jshint esversion:6
 // ES6 classes
 class Book {
     constructor(title, author, year) {

@@ -1,3 +1,4 @@
+//jshint esversion:6
 //Constructor
 function Book(title, author, year) {
     this.title = title;

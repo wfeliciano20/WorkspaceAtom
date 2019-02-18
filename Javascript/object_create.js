@@ -1,3 +1,4 @@
+//jshint esversion:6
 // Object Of Protos
 const bookProtos = {
     getSummary: function() {
